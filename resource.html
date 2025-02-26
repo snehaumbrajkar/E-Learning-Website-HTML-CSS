@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resources</title>
+    <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+    <div class="containerd">
+        <h1>Course Resources</h1>
+        <input type="text" id="searchBox" placeholder="Search for resources..." onkeyup="searchResources()">    
+        <!-- DSA Course -->
+        <div class="course">
+            <h3><b>Resources for DSA</b></h3>
+            <ul class="resource-list">
+                <li><a href="#">“Introduction to Algorithms” by Thomas H. Cormen, Charles E. Leiserson, Ronald L. Rivest, and Clifford Stein</a></li>
+                <li><a href="#">“Algorithms Unlocked” by Thomas H. Cormen</a></li>
+                <li><a href="#"> “Data Structures and Algorithms Made Easy: Data Structures and Algorithmic Puzzles” by Narasimha Karumanchi</a></li>
+            </ul>
+        </div>
+
+        <div class="course">
+            <h3><b>Resources for Coding</b></h3>
+            <ul class="resource-list">
+                <li><a href="#"> Clean Code: By Robert C. Martin </a></li>
+                <li><a href="#"> The Pragmatic Programmer: Your Journey to Mastery</a></li>
+                <li><a href="#"> The complete Reference Java by Herbert Schildt</a></li>
+                <li><a href="#"> Android Programming for Beginners</a></li>
+                <li><a href="#"> Balaguruswamy Object Oriented Programming with C++</a></li>
+                <li><a href="#"> Programming PHP</a></li>
+
+
+            </ul>
+        </div>
+
+        <div class="course">
+            <h3><b>Resources for Web Development</b></h3>
+            <ul class="resource-list">
+                <li><a href="#"> Learning Web Design: A Beginner’s Guide (by Jennifer Niederst Robbins)</a></li>
+                <li><a href="#">The Clean Coder (by Robert Martin)</a></li>
+                <li><a href="#"> HTML and CSS: Design and Build Websites (by Jon Duckett)</a></li>
+                <li><a href="#"> HTML & CSS QuickStart Guide (by David DuRocher)</a></li>
+                <li><a href="#"> Javascript Demystified</a></li>
+            </ul>
+        </div>
+
+        <div class="course">
+            <h3><b>Resources for Aptitude</b></h3>
+            <ul class="resource-list">
+                <li><a href="#">“Introduction to Algorithms” by Thomas H. Cormen, Charles E. Leiserson, Ronald L. Rivest, and Clifford Stein</a></li>
+                <li><a href="#">“Algorithms Unlocked” by Thomas H. Cormen</a></li>
+                <li><a href="#"> “Data Structures and Algorithms Made Easy: Data Structures and Algorithmic Puzzles” by Narasimha Karumanchi</a></li>
+            </ul>
+        </div>
+    </div>     
+
+    <script>
+        function searchResources() {
+            let input = document.getElementById('searchBox').value.toLowerCase();
+            let items = document.querySelectorAll('.resource-list li');
+
+            items.forEach(item => {
+                let text = item.innerText.toLowerCase();
+                if (text.includes(input)) {
+                    item.style.display = "";
+                } else {
+                    item.style.display = "none";
+                }
+            });
+        }
+    </script>
+</body>
+</html>

@@ -1,5 +1,6 @@
 /********** Template CSS **********/
 :root {
+<<<<<<< HEAD
     --primary: #f69050;
     --light: #F0FBFC;
     --light: #f0e4de;
@@ -36,6 +37,13 @@
     border: 1px solid var(--light);
 }
 
+=======
+    --primary: #06BBCC;
+    --light: #F0FBFC;
+    --dark: #181d38;
+}
+
+>>>>>>> 6893202 ( start commit)
 .fw-medium {
     font-weight: 600 !important;
 }
@@ -45,9 +53,16 @@
 }
 
 .back-to-top {
+<<<<<<< HEAD
     position: fixed;
     display: none;
     left: 45px;
+=======
+    background-color: #184cdb;
+    position: fixed;
+    display: none;
+    right: 45px;
+>>>>>>> 6893202 ( start commit)
     bottom: 45px;
     z-index: 99;
 }
@@ -132,7 +147,11 @@
 }
 
 @media (max-width: 991.98px) {
+<<<<<<< HEAD
     .navbar-light .navbar-nav .nav-link {
+=======
+    .navbar-light .navbar-nav .nav-link  {
+>>>>>>> 6893202 ( start commit)
         margin-right: 0;
         padding: 10px 0;
     }
@@ -157,6 +176,7 @@
     transition: .5s;
 }
 
+<<<<<<< HEAD
 .navbar-toggler-icon {
     color: #fb873f;
 }
@@ -165,6 +185,8 @@
     border: 2px solid #fb873f;
 }
 
+=======
+>>>>>>> 6893202 ( start commit)
 @media (min-width: 992px) {
     .navbar .nav-item .dropdown-menu {
         display: block;
@@ -189,6 +211,7 @@
     }
 }
 
+<<<<<<< HEAD
 /*** Header carousel ***/
 
 .header-carousel .owl-carousel-item {
@@ -216,12 +239,20 @@
     }
 }
 
+=======
+
+/*** Header carousel ***/
+>>>>>>> 6893202 ( start commit)
 @media (max-width: 768px) {
     .header-carousel .owl-carousel-item {
         position: relative;
         min-height: 500px;
     }
+<<<<<<< HEAD
 
+=======
+    
+>>>>>>> 6893202 ( start commit)
     .header-carousel .owl-carousel-item img {
         position: absolute;
         width: 100%;
@@ -230,6 +261,7 @@
     }
 }
 
+<<<<<<< HEAD
 @media (max-width: 430px) {
 
     .header-carousel .owl-carousel-item {
@@ -256,6 +288,8 @@
     }
 }
 
+=======
+>>>>>>> 6893202 ( start commit)
 .header-carousel .owl-nav {
     position: absolute;
     top: 50%;
@@ -297,7 +331,11 @@
     background: rgba(15, 23, 43, .7);
 }
 
+<<<<<<< HEAD
 .breadcrumb-item+.breadcrumb-item::before {
+=======
+.breadcrumb-item + .breadcrumb-item::before {
+>>>>>>> 6893202 ( start commit)
     color: var(--light);
 }
 
@@ -344,6 +382,7 @@
 
 /*** Service ***/
 .service-item {
+<<<<<<< HEAD
     transition: .5s;
 }
 
@@ -352,12 +391,19 @@
     color: var(--primary);
 }
 
+=======
+    background: var(--light);
+    transition: .5s;
+}
+
+>>>>>>> 6893202 ( start commit)
 .service-item:hover {
     margin-top: -10px;
     background: var(--primary);
 }
 
 .service-item * {
+<<<<<<< HEAD
     transition: all .3s ease-in-out;
 }
 
@@ -398,6 +444,17 @@
     height: 50px;
 }
 
+=======
+    transition: .5s;
+}
+
+.service-item:hover * {
+    color: var(--light) !important;
+}
+
+
+/*** Categories & Courses ***/
+>>>>>>> 6893202 ( start commit)
 .category img,
 .course-item img {
     transition: .5s;
@@ -406,7 +463,10 @@
 .category a:hover img,
 .course-item:hover img {
     transform: scale(1.1);
+<<<<<<< HEAD
     margin-top: -10px;
+=======
+>>>>>>> 6893202 ( start commit)
 }
 
 
@@ -444,7 +504,10 @@
 }
 
 @media (min-width: 768px) {
+<<<<<<< HEAD
 
+=======
+>>>>>>> 6893202 ( start commit)
     .testimonial-carousel::before,
     .testimonial-carousel::after {
         width: 200px;
@@ -452,7 +515,10 @@
 }
 
 @media (min-width: 992px) {
+<<<<<<< HEAD
 
+=======
+>>>>>>> 6893202 ( start commit)
     .testimonial-carousel::before,
     .testimonial-carousel::after {
         width: 300px;
@@ -559,4 +625,263 @@
     margin-right: 0;
     padding-right: 0;
     border-right: none;
+<<<<<<< HEAD
+=======
+}
+
+/*hjgfjfjsfsfsjhfhsfjsfjgfsjgfsfjdgfjshgs*/
+ .navbarq{
+    
+        background: linear-gradient(90deg, #ff7e5f, #feb47b); /* Gradient effect */
+        padding: 15px 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+ }
+
+ 
+ .quiz-container {
+    margin:20px;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 400px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.question {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.options {
+    display: flex;
+    flex-direction: column;
+}
+
+.options button {
+    margin: 5px 0;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background: #1e3c72;
+    color: white;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.options button:hover {
+    background: #2a5298;
+}
+
+#timer {
+    font-size: 16px;
+    margin: 10px 0;
+    color: red;
+}
+
+#result {
+    font-size: 18px;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+.hidden {
+    display: none;
+}
+
+#retry {
+    margin-top: 15px;
+    padding: 10px;
+    background: #1e3c72;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#retry:hover {
+    background: #2a5298;
+}
+#stop {
+    margin-top: 15px;
+    padding: 10px;
+    background: #1e3c72;
+    color: white;
+    border: none;
+    font-size: medium;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+#stop:hover{
+    background-color: #2a5298;
+}
+
+#start{
+    margin-top: 15px;
+    padding: 10px;
+    background: #1e3c72;
+    color: white;
+    border: none;
+    font-size: medium;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s; 
+}
+#start:hover{
+    background-color: #2a5298;  
+}
+
+
+.jumbotron-container {
+    display: flex;
+    flex-wrap: wrap; /* Wrap items on smaller screens */
+    justify-content: space-between; /* Even spacing */
+    gap: 20px; /* Space between jumbotrons */
+    padding: 20px;
+}
+
+.jumbotron {
+    position: relative;
+    width: 23%; /* Ensures 4 fit in one row */
+    overflow: hidden;
+    text-align: center;
+    color: white;
+    border-radius: 10px;
+}
+
+.jumbotron img {
+    width: 100%;
+    height: 400px;
+    opacity: 0.8; /* Light transparency for readability */
+    display: block;
+    border-radius: 10px;
+    color:#FFFFFF;
+}
+
+.jumbotron .overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+  
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.jumbotron h3 {
+    color:#FFFFFF;
+    font-size: 20px;
+    margin: 5px 0;
+}
+
+.jumbotron p {
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.jumbotron .btn {
+    background-color: #007bff;
+    color: white;
+    padding: 8px 12px;
+    border: none;
+    text-decoration: none;
+    border-radius: 5px;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+/* ✅ Responsive Design */
+@media (max-width: 992px) { /* For tablets */
+    .jumbotron {
+        width: 48%; /* Two per row */
+    }
+}
+
+@media (max-width: 600px) { /* For mobile */
+    .jumbotron {
+        width: 100%; /* Full width for small screens */
+    }
+}
+
+.containerd {
+    max-width: 800px;
+    margin: auto;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+h1, h2, h3 {
+    text-align: center;
+    color: #333;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.course {
+    margin-bottom: 40px;
+    padding: 20px;
+    border-radius: 8px;
+    background: #ffffff;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+.course h2 {
+    color: #020e1a;
+}
+.video {
+    text-align: center;
+    margin: 20px 0;
+}
+.resources {
+    text-align: center;
+    margin-top: 20px;
+}
+.resources a {
+    display: inline-block;
+    padding: 10px 15px;
+    margin: 5px;
+    text-decoration: none;
+    background: #007bff;
+    color: white;
+    border-radius: 5px;
+}
+.resources a:hover {
+    background: #0056b3;
+}
+
+#menu{
+    padding: 10px 15px;
+    margin: 5px;
+    text-decoration: none;
+    display: inline-block;
+    color:#181d38;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+.course{
+    align-items: center;
+    color:#dcd3d3;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background: linear-gradient(90deg, #06BBCC, #1443cf);
+}
+
+#searchBox{
+    height:30px;
+    width:280px;
+    margin:20px;
+    padding:10px;
+    border:1px solid #181d38;
+    border-radius: 15px;
+}
+
+.footer{
+    background-color: #06BBCC;
+>>>>>>> 6893202 ( start commit)
 }

@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="css/style.css" rel="stylesheet">
+
+</head>
+<body>
+    
+    <nav class="navbarq">
+        <h2><center>Quizzes</center></h2>
+      </nav>
+
+      <center><div class="quiz-container">
+        <h2>Interactive Quiz</h2>
+        <p id="timer">Time left: <span id="time">30</span> seconds</p>
+        <div id="quiz">
+            <p class="question" id="question">Loading question...</p>
+            <div class="options" id="options"></div>
+        </div>
+        <p id="result" class="hidden"></p>
+        <button id="retry" class="hidden" onclick="retryQuiz()">Retry Quiz</button>
+        <button id="start" onclick="startQuiz()">Start Quiz</button>
+        <button id="stop"  onclick="stopQuiz()">Quit</button>
+    </div></center>
+    <script>
+        // Quiz questions categorized into Web Dev, Coding, DSA, and Aptitude
+        const questions = [
+            {
+                category: "Web Development",
+                question: "Which language is used for styling web pages?",
+                options: ["HTML", "CSS", "JavaScript", "Python"],
+                answer: 1
+            },
+            {
+                category: "Web Development",
+                question: "Which HTML tag is used to create a hyperlink?",
+                options: ["<a>", "<link>", "<href>", "<url>"],
+                answer: 0
+            },
+            {
+                category: "Coding",
+                question: "What is the output of `console.log(typeof [])` in JavaScript?",
+                options: ["Array", "Object", "Undefined", "Function"],
+                answer: 1
+            },
+            {
+                category: "Coding",
+                question: "Which keyword is used to declare a constant variable in JavaScript?",
+                options: ["var", "let", "const", "final"],
+                answer: 2
+            },
+            {
+                category: "DSA",
+                question: "Which data structure follows LIFO (Last In First Out)?",
+                options: ["Queue", "Stack", "Linked List", "Heap"],
+                answer: 1
+            },
+            {
+                category: "DSA",
+                question: "What is the time complexity of binary search?",
+                options: ["O(n)", "O(log n)", "O(n^2)", "O(1)"],
+                answer: 1
+            },
+            {
+                category: "Aptitude",
+                question: "If 5x = 25, what is the value of x?",
+                options: ["3", "4", "5", "6"],
+                answer: 2
+            },
+            {
+                category: "Aptitude",
+                question: "Find the missing number: 2, 6, 12, 20, ?",
+                options: ["28", "30", "36", "40"],
+                answer: 1
+            }
+        ];
+
+        let currentQuestionIndex = 0;
+        let score = 0;
+        let timeLeft = 30;
+        let timer;
+
+        const questionElement = document.getElementById("question");
+        const optionsElement = document.getElementById("options");
+        const resultElement = document.getElementById("result");
+        const retryButton = document.getElementById("retry");
+        const timerElement = document.getElementById("time");
+        const quit = document.getElementById("stop");
+        const start = document.getElementById("start");
+    
+        function startQuiz() {
+            // Reset variables
+            currentQuestionIndex = 0;
+            score = 0;
+            timeLeft = 30;
+            resultElement.classList.add("hidden");
+            retryButton.classList.add("hidden");
+            document.getElementById("quiz").classList.remove("hidden");
+
+            // Start the timer
+            clearInterval(timer);
+            timer = setInterval(() => {
+                if (timeLeft > 0) {
+                    timeLeft--;
+                    timerElement.innerText = timeLeft;
+                } else {
+                    clearInterval(timer);
+                    endQuiz();
+                }
+            }, 1000);
+
+            loadQuestion();
+        }
+
+        function stopQuiz(){
+            clearInterval(timer);
+            document.getElementById("quiz").classList.add("hidden");
+           retryButton.classList.remove("hidden");
+        }
+
+        function retryQuiz(){
+            clearInterval(timer);
+            timer = setInterval(() => {
+                if (timeLeft > 0) {
+                    timeLeft--;
+                    timerElement.innerText = timeLeft;
+                } else {
+                    clearInterval(timer);
+                    endQuiz();
+                }
+            }, 1000);
+        }
+
+        function loadQuestion() {
+            if (currentQuestionIndex < questions.length) {
+                let q = questions[currentQuestionIndex];
+                questionElement.innerText = `[${q.category}] ${q.question}`;
+                optionsElement.innerHTML = "";
+
+                q.options.forEach((option, index) => {
+                    let button = document.createElement("button");
+                    button.innerText = option;
+                    button.onclick = () => checkAnswer(index);
+                    optionsElement.appendChild(button);
+                });
+            } else {
+                endQuiz();
+            }
+        }
+
+        function checkAnswer(selectedIndex) {
+            let correctIndex = questions[currentQuestionIndex].answer;
+            if (selectedIndex === correctIndex) {
+                score++;
+            }
+            currentQuestionIndex++;
+            loadQuestion();
+        }
+
+        function endQuiz() {
+            clearInterval(timer);
+            document.getElementById("quiz").classList.add("hidden");
+            resultElement.innerText = `You scored ${score} out of ${questions.length}`;
+            resultElement.classList.remove("hidden");
+            retryButton.classList.remove("hidden");
+        }
+
+        // Start the quiz on page load
+       
+    </script>
+      
+</body>
+</html>
